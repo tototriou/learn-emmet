@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emmet Formation</title>
+    <!-- pour le css link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Abbreviations -->
+    <!-- https://docs.emmet.io/abbreviations/syntax/ pour avoir la doc emmet-->
+
+    <!-- Le DOCTYPE, ! + tab -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+    </body>
+
+    </html>
+
+
+    <!-- générateur de lorem ipsum, lorem200  -->
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim iure praesentium accusantium. Quidem impedit neque
+    totam quam ex, repudiandae voluptatibus!
+
+    <!-- Div + tab -->
+
+    <div></div>
+    <p></p>
+    <ul></ul>
+    <img src="" alt="">
+
+
+    <!-- Pour un h1 par exemple -->
+
+    <h1></h1>
+
+    <!-- Abbreviations pour header-hdr blockquote-bq footer-ftr button-btn -->
+
+    <header></header>
+    <blockquote></blockquote>
+    <button></button>
+    <footer></footer>
+
+    <!-- Un h1 avec une classe, h1.maClasse -->
+
+    <h1 class="maClasse"></h1>
+
+    <!-- Pour les classes, div.maClasse puis tab -->
+    <!-- vous pouvez aussi faire .maClasse -->
+
+    <div class="maClasse"></div>
+
+
+
+    <!-- double classe ou plus div.maclasse1.maclasse2 -->
+
+    <div class="maclass1 maclasse2 c2 c4"></div>
+
+    <!-- pour les ids div#monId, ou juste #monId pour les divs-->
+
+    <div id="monId"></div>
+
+    <!-- pour id et classe, div.maClasse#monId -->
+
+    <div class="maClasse" id="monId"></div>
+
+
+    <!--  Contenu  -->
+
+
+    <!-- Rajouter du contenu {}, h1{monContenu} -->
+
+    <h1>mon titre</h1>
+    <h1 class="maClasse">mon titre</h1>
+
+    <!-- faire une chaine, div.maClasse#monId{Hey du contenu} -->
+
+    <h1 class="maClasse">mon titre</h1>
+
+
+    <!--  Nesting  -->
+
+
+    <!-- Faire du nesting div>ul>li -->
+
+    <div>
+        <p></p>
+    </div>
+
+    <div>
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+
+    <!-- on peut faire ul>.item a utiliser avec parsimonie-->
+
+    <ul>
+        <li class="item"></li>
+    </ul>
+
+    <!-- Faire des chaines de + en + complexes,     div.maClasse>ul#idListe.liste>li{hey du contenu} -->
+
+    <div class="maClasse">
+        <ul id="idList" class="liste">
+            <li>du contenu</li>
+        </ul>
+    </div>
+
+    <!--  Multiplication  -->
+
+    <!-- pour multiplier on utilise "*" div*6 -->
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <!-- Très pratique avec les listes -->
+
+
+    <!-- le dollar $ pour l'index, ul>li{$}*5 -->
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <!-- pour differencier les classes (pour la notation BEM par ex), ul>li.item.item$*6 -->
+
+    <ul>
+        <li class="item item1"></li>
+        <li class="item item2"></li>
+        <li class="item item3"></li>
+        <li class="item item4"></li>
+        <li class="item item5"></li>
+        <li class="item item6"></li>
+    </ul>
+
+    <ul>
+        <li class="item1"></li>
+        <li class="item2"></li>
+        <li class="item3"></li>
+        <li class="item4"></li>
+        <li class="item5"></li>
+        <li class="item6"></li>
+    </ul>
+
+    <!--  Éléments au même niveau  -->
+
+    <!-- on utilise ls signe "+" div+p+h1 -->
+
+    <div></div>
+    <p></p>
+    <h1></h1>
+
+    <!-- créer plusieurs éléments avec classe au meme niveau h1.maClasse1+div.Accueil -->
+
+    <h1 class="maClassse"></h1>
+    <div class="Accueil"></div>
+
+
+    <!-- utiliser le nesting, sibling et classe div>h1.titre+p.txt -->
+
+    <div>
+        <h1 class="titre"></h1>
+        <div class="txt"></div>
+    </div>
+
+    <!--  Monter d'un étage  -->
+
+    <!-- on monte avec ^, div>ul^h1 -->
+    <!-- on peut remonter de plusieurs niveaux ^^,  div>div>div>ul^^^h1 -->
+
+    <div>
+        <ul></ul>
+    </div>
+    <h1></h1>
+
+    <div>
+        <div>
+            <div>
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+    <h1></h1>
+
+    <!--  Faire des groupes  -->
+
+    <!-- on utiles les parenthèses   div>(header>ul>li*2>a)+footer>p{mon footer} -->
+
+    <div>
+        <header>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </header>
+        <footer>
+            <p>mon footer</p>
+        </footer>
+    </div>
+
+    <!--  Attributs  -->
+
+    <!-- On utilise les crochets [], a[href="http://google.com" target="_blank" title="Google"] -->
+
+    <a href="http://google.com" targer="_blank"></a>
+
+    <!--  Form et Inputs  -->
+
+    <!-- form, form:get, form:post -->
+
+    <form action=""></form>
+    <form action="" method="get"></form>
+    <form action="" method="post"></form>
+
+    <!-- label, lab -->
+
+    <label for=""></label>
+    <label for=""></label>
+
+    <!-- input, inp + tab-->
+
+    <input type="text">
+    <input type="text" name="" id="">
+
+    <!-- input pour email submit, input:email, input:s -->
+
+    <input type="email" name="" id="">
+    <input type="submit" value="">
+
+    <!-- select -->
+
+    <select name="" id=""></select>
+
+    <!--  Structure étendue  -->
+
+    <!-- Le + à la fin, ne fonctionne pas sous VS CODE -->
+
+    <!-- ol+, ul+, pour les listes étendues -->
+
+
+
+    <!-- table+, select+, pic+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
